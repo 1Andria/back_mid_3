@@ -33,5 +33,5 @@ export class QueryParamsDto {
 
   @IsOptional()
   @IsString()
-  gender: 'f' | 'm';
+  gender: string;
 }
