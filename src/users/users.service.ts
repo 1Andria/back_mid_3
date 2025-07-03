@@ -80,7 +80,7 @@ export class UsersService {
       filter.firstName = { $regex: firstName, $options: 'i' };
     }
     if (gender) {
-      filter.gender = { $regex: gender };
+      filter.gender = { $regex: `^${gender}`, $options: 'i' };
     }
 
     return await this.userModel
